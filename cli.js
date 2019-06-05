@@ -33,7 +33,7 @@ const download = (url, cb) => {
   }).on('error', err => cb(err))
 }
 
-readFile(argv.inputPath, 'utf8', (err, res) => {
+readFile(argv.reportPath, 'utf8', (err, res) => {
   if (err) throw err
   const report = JSON.parse(res)
   const url = getBadge(report)
